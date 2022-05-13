@@ -1,0 +1,203 @@
+@import '../../styles/global.scss';
+
+.text {
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .bodyS,
+  .bodyM,
+  .bodyL {
+    font-family: 'Source Sans Pro';
+    cursor: default;
+
+    & > a {
+      color: $blueM;
+      text-decoration: none;
+      &[data-style='bold'] {
+        font-weight: bold;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    & > a:hover {
+      text-decoration: underline;
+    }
+    &[data-color='blackD'] {
+      color: $blackD;
+    }
+    &[data-color='blackM'] {
+      color: $blackM;
+    }
+    &[data-color='blackML'] {
+      color: $blackML;
+    }
+    &[data-color='white'] {
+      color: $white;
+    }
+
+    &[data-align='start'] {
+      text-align: start;
+    }
+    &[data-align='center'] {
+      text-align: center;
+    }
+    &[data-align='end'] {
+      text-align: end;
+    }
+    &[data-align='justify'] {
+      text-align: justify;
+    }
+
+    &[data-transform='uppercase'] {
+      text-transform: uppercase;
+    }
+    &[data-transform='lowercase'] {
+      text-transform: lowercase;
+    }
+    &[data-transform='capitalize'] {
+      text-transform: capitalize;
+    }
+
+    &[data-decoration='lineThrough'] {
+      text-decoration: line-through;
+    }
+    &[data-decoration='underline'] {
+      text-decoration: underline;
+    }
+  }
+
+  .h1 {
+    @include body-small;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+  }
+
+  .h2 {
+    @include body-small;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+
+    & > a {
+      color: $blueMD;
+      text-decoration: none;
+    }
+    & > a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .h3 {
+    @include body-small;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+    & > a {
+      color: $blueMD;
+      text-decoration: none;
+    }
+    & > a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .h4 {
+    @include body-small;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+    & > a {
+      color: $blueMD;
+      text-decoration: none;
+    }
+    & > a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .bodyS {
+    @include body-small;
+    color: $blackM;
+
+    &[data-style='bold'] {
+      font-style: normal;
+      font-weight: bold;
+    }
+    &[data-style='italic'] {
+      font-style: italic;
+      font-weight: normal;
+    }
+  }
+
+  .bodyM {
+    @include body-medium;
+
+    &[data-style='bold'] {
+      font-style: normal;
+      font-weight: bold;
+    }
+    &[data-style='italic'] {
+      font-style: italic;
+      font-weight: normal;
+    }
+    &[data-align='center'] {
+      text-align: center;
+    }
+  }
+
+  .bodyL {
+    @include body-large;
+    color: $blackM;
+
+    &[data-style='bold'] {
+      font-style: normal;
+      font-weight: bold;
+    }
+    &[data-style='italic'] {
+      font-style: italic;
+      font-weight: normal;
+    }
+  }
+
+  .bodyAllCaps {
+    font-family: 'Source Sans Pro';
+    color: $blackM;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 136%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .bodyNumbers {
+    font-family: 'Source Sans Pro';
+    color: $blackM;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.08em;
+
+    &[data-style='bold'] {
+      font-style: normal;
+      font-weight: bold;
+    }
+    &[data-style='italic'] {
+      font-style: italic;
+      font-weight: normal;
+    }
+  }
+}

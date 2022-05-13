@@ -1,0 +1,168 @@
+@import '../../styles/global.scss';
+
+.inputContainer {
+  label {
+    @include body-small;
+    font-weight: 500;
+    color: $blackM;
+  }
+
+  .errorMessage {
+    padding-left: 0.5rem;
+    height: 1.5rem;
+    font-size: 0.75rem;
+    color: $error;
+  }
+
+  .inputWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 0.25rem;
+    border: 0.0625rem solid $grayML;
+    background-color: $grayL;
+
+    &:hover {
+      border-color: $blueM;
+    }
+
+    &[data-status='invalid'] {
+      border-color: $error;
+    }
+
+    &[data-status='disabled'] {
+      cursor: not-allowed;
+      border-color: $grayL;
+      background-color: $grayL;
+      color: $grayML;
+    }
+
+    &[prefix-icon='true'] {
+      & svg {
+        margin-left: 0.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: rgba(34, 34, 34, 0.54);
+      }
+    }
+
+    &:focus-within {
+      &[data-status='valid'] {
+        border-color: $blueM;
+        box-shadow: 0 0 0 0.0625rem $blueM;
+      }
+
+      &[data-status='invalid'] {
+        border-color: $error;
+        box-shadow: 0 0 0 0.0625rem $error;
+      }
+
+      &[prefix-icon='true'] {
+        > svg {
+          fill: $blueM;
+        }
+      }
+    }
+
+    &[suffix-icon='true'] {
+      button {
+        display: flex;
+        border: none;
+        margin-right: 0.75rem;
+        align-items: center;
+        background-color: transparent;
+        &:hover {
+          cursor: pointer;
+          & svg {
+            color: $blackL;
+          }
+        }
+        & svg {
+          margin-left: 0.5rem;
+          width: 1.5rem;
+          height: 1.5rem;
+          color: rgba(34, 34, 34, 0.54);
+        }
+      }
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem 0.5714rem;
+      border-radius: 0.25rem;
+      background-color: $grayL;
+      color: $blackM;
+      font-size: 0.875rem;
+
+      &:disabled {
+        background-color: $grayML;
+        cursor: not-allowed;
+      }
+
+      &::placeholder {
+        color: $blackL;
+        font-size: 0.875rem;
+      }
+
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 3rem $grayL inset;
+        box-shadow: 0 0 0 3rem $grayL inset;
+      }
+
+      &:-webkit-autofill:disabled {
+        -webkit-box-shadow: 0 0 0 3rem $grayML inset;
+        box-shadow: 0 0 0 3rem $grayML inset;
+      }
+    }
+  }
+
+  textarea {
+    width: 100%;
+    padding: 0.5rem 0.5714rem;
+    border-radius: 0.25rem;
+    background-color: $grayL;
+    color: $blackM;
+    font-size: 0.875rem;
+    border: 0.0625rem solid $grayML;
+    resize: none;
+    min-height: 12rem;
+    height: 1.875rem;
+    width: 100%;
+    display: flex;
+    outline: none;
+
+    &:focus {
+      border-color: $blueM;
+    }
+
+    &:hover {
+      border-color: $blueM;
+    }
+
+    &[data-status='invalid'],
+    &[data-status='invalid']:hover {
+      border-color: $error;
+    }
+
+    &:focus-within {
+      border: 0.0625rem solid;
+      border-color: $blueM;
+      &[data-status='valid'] {
+        border-color: $blueM;
+        box-shadow: 0rem 0rem 0rem 0.0625rem $blueM;
+      }
+
+      &[data-status='invalid'] {
+        border-color: $error;
+        box-shadow: 0rem 0rem 0rem 0.0625rem $error;
+
+        &::after {
+          background-color: $error;
+        }
+      }
+    }
+  }
+}

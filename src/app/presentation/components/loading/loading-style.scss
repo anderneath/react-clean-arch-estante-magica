@@ -1,0 +1,42 @@
+@import '../../styles/global.scss';
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.loadingText {
+  @include heading-small;
+  font-weight: bold;
+  color: $blackM;
+  cursor: default;
+}
+
+.loadingText:after {
+  display: inline-flex;
+  -webkit-animation: ellipsis steps(1, end) 1.5s infinite;
+  animation: ellipsis steps(1, end) 1.5s infinite;
+  content: '';
+  width: 1.8rem;
+}
+
+@keyframes ellipsis {
+  0% {
+    content: '';
+  }
+  25% {
+    content: '.';
+  }
+  50% {
+    content: '..';
+  }
+  75% {
+    content: '...';
+  }
+  100% {
+    content: '';
+  }
+}

@@ -1,0 +1,41 @@
+@import '../../../app/presentation/styles/colors.scss';
+
+th {
+  font-weight: bold !important;
+  text-transform: uppercase;
+}
+
+.contentWrap {
+  display: flex;
+  background-color: $grayL;
+  flex-direction: column;
+  min-height: 100vh;
+  // justify-content: space-around;
+  align-items: center;
+}
+
+.studentsNotFoundWrap {
+  margin: auto;
+  cursor: default;
+  .noStudentButton {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    > div {
+      width: 20rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 416px) {
+  .contentWrap {
+    background-color: $white;
+    & .form {
+      width: 100%;
+      border-radius: 0;
+      box-shadow: none;
+      margin: 0;
+      padding: 40px 16px;
+    }
+  }
+}

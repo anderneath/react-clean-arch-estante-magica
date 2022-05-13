@@ -1,0 +1,57 @@
+$white: #ffffff;
+
+$grayL: #f8f8f8;
+$grayML: #e7e7e7;
+$grayM: #c0c0c0;
+$grayD: #949494;
+
+$blackL: #949494;
+$blackML: #6f6f6f;
+$blackM: #444444;
+$blackD: #222222;
+
+$blueL: #66bbe2;
+$blueML: #33a5d9;
+$blueM: #008ecf;
+$blueMD: #0072a6;
+$blueD: #00557c;
+
+$pinkL: #e37da3;
+$pinkML: #d95184;
+$pinkM: #d02665;
+$pinkMD: #a61e51;
+$pinkD: #7d173d;
+
+$success: #4caf50;
+$warning: #fec115;
+$error: #ef5350;
+
+:export {
+  white: $white;
+
+  grayL: $grayL;
+  grayML: $grayML;
+  grayM: $grayM;
+  grayD: $grayD;
+
+  blackL: $blackL;
+  blackML: $blackML;
+  blackM: $blackM;
+  blackD: $blackD;
+
+  blueL: $blueL;
+  blueML: $blueML;
+  blueM: $blueM;
+  blueMD: $blueMD;
+  blueD: $blueD;
+
+  pinkL: $pinkL;
+  pinkML: $pinkML;
+  pinkM: $pinkM;
+  pinkMD: $pinkMD;
+  pinkD: $pinkD;
+
+  success: $success;
+  warning: $warning;
+  error: $error;
+}

@@ -1,0 +1,85 @@
+@import '../../styles/global.scss';
+
+.buttonWrap {
+  &[data-align='start'] {
+    text-align: start;
+  }
+  &[data-align='center'] {
+    text-align: center;
+  }
+  &[data-align='end'] {
+    text-align: end;
+  }
+  &[data-align='justify'] {
+    text-align: justify;
+  }
+
+  @mixin base {
+    @include body-medium;
+    align-self: center;
+    align-content: center;
+    min-width: 100px;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      height: auto;
+    }
+  }
+
+  .primary {
+    @include base;
+    background-color: $pinkM;
+    border: none;
+    color: $white;
+
+    &:hover {
+      background-color: $pinkMD;
+    }
+
+    &:active:hover {
+      background-color: $pinkD;
+    }
+
+    &:disabled {
+      background-color: $pinkL;
+      cursor: not-allowed;
+    }
+  }
+
+  .secondary {
+    @include base;
+    background-color: $white;
+    border: 0.0625rem solid $pinkM;
+    color: $pinkM;
+
+    &:hover {
+      background-color: rgba($pinkMD, 0.1);
+      border-color: $pinkD;
+      color: $pinkD;
+    }
+
+    &:active:hover {
+      background-color: rgba($pinkMD, 0.2);
+      border-color: $pinkD;
+      color: $pinkD;
+    }
+
+    &:disabled {
+      background-color: $white;
+      border-color: $pinkL;
+      color: $pinkL;
+      cursor: not-allowed;
+    }
+
+    img {
+      height: auto;
+    }
+  }
+}
